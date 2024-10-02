@@ -37,7 +37,7 @@ export default function Client() {
 
   return (
     <div>
-      <h1>Questionnaire Client</h1>
+      <h1>Questionnaire Client 🤑</h1>
       {/* <h2>Question {currentQuestion}</h2> */}
         {/* Afficher la question actuelle */}
         <h2>{questionnaire[`question ${currentQuestion}`]}</h2>
