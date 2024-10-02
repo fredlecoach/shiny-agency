@@ -5,6 +5,9 @@ import Survey from './Survey';
 import Header from'./Header';
 import Freelance from './FreelanceForm/index';
 import Client from './ClientForm/index';
+import Error from './Error'
+import Results from './Results';
+import Freelances from './Freelances'
 
 function App() {
   return (
@@ -12,9 +15,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/survey" element={<Survey />} />
-        <Route path="/client" element={ <Client />} />
+        <Route path="/survey/:questionNumber" element={<Survey />} />
+        <Route path="/client/:questionNumber" element={ <Client />} />
         <Route path="/freelance" element={ <Freelance /> } />
+        <Route path="/results" element={ <Results />} />
+        <Route path="/freelances" element={ <Freelances />} />
+        <Route path="*" element={ <Error />} />
       </Routes>
     </Router>
   );
